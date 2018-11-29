@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/adventOfCode2018.iml" filepath="$PROJECT_DIR$/adventOfCode2018.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day-one/day-one.iml" filepath="$PROJECT_DIR$/.idea/modules/day-one/day-one.iml" group="day-one" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day-one/day-one_main.iml" filepath="$PROJECT_DIR$/.idea/modules/day-one/day-one_main.iml" group="day-one" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/day-one/day-one_test.iml" filepath="$PROJECT_DIR$/.idea/modules/day-one/day-one_test.iml" group="day-one" />
+    </modules>
+  </component>
+</project>
