@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="day-one_main" target="11" />
       <module name="day-one_test" target="11" />
+      <module name="tpl_main" target="11" />
+      <module name="tpl_test" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

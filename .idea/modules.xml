@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day-one/day-one.iml" filepath="$PROJECT_DIR$/.idea/modules/day-one/day-one.iml" group="day-one" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day-one/day-one_main.iml" filepath="$PROJECT_DIR$/.idea/modules/day-one/day-one_main.iml" group="day-one" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/day-one/day-one_test.iml" filepath="$PROJECT_DIR$/.idea/modules/day-one/day-one_test.iml" group="day-one" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tpl/tpl.iml" filepath="$PROJECT_DIR$/.idea/modules/tpl/tpl.iml" group="tpl" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tpl/tpl_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tpl/tpl_main.iml" group="tpl" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tpl/tpl_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tpl/tpl_test.iml" group="tpl" />
     </modules>
   </component>
 </project>
