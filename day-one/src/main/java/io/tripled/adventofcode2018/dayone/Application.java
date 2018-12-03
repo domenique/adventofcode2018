@@ -13,8 +13,11 @@ public class Application {
         var resource = Application.class.getClassLoader().getResource("input.txt");
         var input = Files.readString(Paths.get(resource.toURI()));
 
-        tool.changeFrequency(input);
+        do {
+            tool.changeFrequency(input);
+        } while (tool.firstDuplicateFrequency() == null);
 
         System.out.println("Frequency: " + tool.currentFrequency());
+        System.out.println("First duplicate: " + tool.firstDuplicateFrequency());
     }
 }

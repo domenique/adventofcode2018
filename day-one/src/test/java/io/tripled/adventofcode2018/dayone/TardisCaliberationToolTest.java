@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TardisCaliberationToolTest {
+class TardisCaliberationToolTest {
 
     @Test
     void determinesFrequencyStartingFromZero() {
@@ -18,7 +18,7 @@ public class TardisCaliberationToolTest {
     void determinesFrequencyStartingAtOne() {
         TardisCaliberationTool tool = new TardisCaliberationTool(1);
 
-        tool.changeFrequency( -2);
+        tool.changeFrequency(-2);
 
         assertThat(tool.currentFrequency()).isEqualTo(-1);
     }
@@ -27,7 +27,7 @@ public class TardisCaliberationToolTest {
     void determinesFrequencyWhenGivenMultipleDeltas() {
         TardisCaliberationTool tool = new TardisCaliberationTool();
 
-        tool.changeFrequency( "+1\n" +
+        tool.changeFrequency("+1\n" +
                 "+6\n" +
                 "+6\n" +
                 "+2\n" +
@@ -40,12 +40,26 @@ public class TardisCaliberationToolTest {
     void determinesFrequencyWhenGivenMultipleDeltasAndNegative() {
         TardisCaliberationTool tool = new TardisCaliberationTool();
 
-        tool.changeFrequency( "+1\n" +
+        tool.changeFrequency("+1\n" +
                 "+6\n" +
                 "+6\n" +
                 "+2\n" +
                 "-5");
 
         assertThat(tool.currentFrequency()).isEqualTo(10);
+    }
+
+    @Test
+    void determinesFrequencyAndFirstDuplicateFrequency() {
+        TardisCaliberationTool tool = new TardisCaliberationTool();
+
+        tool.changeFrequency("+1\n" +
+                "+1\n" +
+                "-3\n" +
+                "+3\n" +
+                "+8");
+
+        assertThat(tool.currentFrequency()).isEqualTo(10);
+        assertThat(tool.firstDuplicateFrequency()).isEqualTo(2);
     }
 }

@@ -1,12 +1,17 @@
 package io.tripled.adventofcode2018.dayone;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 class TardisCaliberationTool {
 
-    private int frequency;
+    private Integer frequency;
+    private List<Integer> previousFrequencies = new ArrayList<>();
+    private Integer firstDuplicate;
 
     TardisCaliberationTool() {
+        frequency = 0;
     }
 
     TardisCaliberationTool(int frequency) {
@@ -20,11 +25,22 @@ class TardisCaliberationTool {
     void changeFrequency(String input) {
         frequency = Arrays.stream(input.split("\n"))
                 .mapToInt(Integer::valueOf)
-                .reduce(frequency, Integer::sum);
+                .reduce(frequency, (left, right) -> {
+                    int nextFreq = left + right;
+                    if (firstDuplicate == null && previousFrequencies.contains(nextFreq)) {
+                        firstDuplicate = nextFreq;
+                    }
+                    previousFrequencies.add(nextFreq);
+                    return nextFreq;
+                });
 
     }
 
-    int currentFrequency() {
+    Integer currentFrequency() {
         return frequency;
+    }
+
+    Integer firstDuplicateFrequency() {
+        return firstDuplicate;
     }
 }
