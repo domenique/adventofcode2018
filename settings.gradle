@@ -1,3 +1,4 @@
 enableFeaturePreview('STABLE_PUBLISHING')
 rootProject.name = 'adventOfCode2018'
+include 'tpl'
 include 'day-one'
